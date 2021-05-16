@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <a>test</a>
     </div>
     <router-view/>
   </div>
@@ -10,11 +11,13 @@
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  //this is where we use the variable
+  color: $primary;
+  margin-top: 60px;
 }
 
 #nav {
@@ -24,9 +27,10 @@
     font-weight: bold;
     color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
-}
+
 </style>
